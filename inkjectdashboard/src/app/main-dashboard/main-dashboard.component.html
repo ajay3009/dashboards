@@ -1,8 +1,30 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <span>Third Line</span>
+    <span>Dashboard</span>
     <span class="example-spacer"></span>
-    <mat-icon fontSet="fa" fontIcon="alarm"></mat-icon>
-    <mat-icon class="example-icon">delete</mat-icon>
+    <div class="button-row align-right">
+      <button mat-icon-button>
+        <mat-icon aria-label="profile" md-font-set="material-icons">person</mat-icon>
+      </button>
+      <button mat-icon-button>
+        <mat-icon aria-label="profile" md-font-set="material-icons">filter_list</mat-icon>
+      </button>
+    </div>
+
   </mat-toolbar-row>
 </mat-toolbar>
+<mat-sidenav-container class="example-container">
+    <mat-sidenav #sidenav position="end" mode="side" [(opened)]="opened" (opened)="events.push('open!')"
+                 (closed)="events.push('close!')">
+      Sidenav content
+    </mat-sidenav>
+  
+    <mat-sidenav-content>
+      
+      <p><button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button></p>
+      <p>Events:</p>
+      <div class="example-events">
+        <div *ngFor="let e of events">{{e}}</div>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
