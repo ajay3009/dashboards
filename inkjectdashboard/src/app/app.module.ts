@@ -10,6 +10,11 @@ import {MatIconModule } from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatTooltipModule} from '@angular/material/tooltip';
+
+
+/* Components */
 
 import { AppComponent } from './app.component';
 import { MainDashboardComponent } from './main-dashboard/main-dashboard.component';
@@ -40,7 +45,10 @@ const appRoutes: Routes = [
     MatIconModule,
     MatButtonModule,
     MatSidenavModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatGridListModule,
+    MatTooltipModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
