@@ -4,6 +4,11 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { MatCheckboxModule  } from '@angular/material/checkbox';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatCardModule} from '@angular/material/card';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatDividerModule} from '@angular/material/divider';
+
 
 @Component({
   selector: 'app-main-dashboard',
@@ -12,6 +17,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 })
 export class MainDashboardComponent implements OnInit {
   @ViewChild('sidenav') sidenav: MatSidenavModule;
+  panelOpenState: boolean = false;
 
   reason = '';
 

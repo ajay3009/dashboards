@@ -17,3 +17,20 @@
   .example-spacer {
     flex: 1 1 auto;
   }
+
+  .mat-drawer-container {
+    top:64px;
+  }
+
+  .logo_gfk {
+    height: 40px;
+    margin-right: 10px;
+  }
+
+  .card-bg-img {
+    background: linear-gradient(to bottom, #4a4e51 25%, #000000 100%);
+  }
+
+  mat-sidenav {
+    width: calc(50% + 50px);
+  }
